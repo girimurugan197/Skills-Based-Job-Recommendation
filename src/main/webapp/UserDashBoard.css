@@ -1,0 +1,439 @@
+body {
+    background-color: antiquewhite;
+  }
+  
+  .navcontainer {
+      margin:auto;
+    background-color: #333;
+    align-items: end;
+    width: 100%;
+  }
+  
+  nav {
+    align-items: end;
+    overflow: hidden;
+  }
+  
+  ul {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    padding-right: 10px;
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .welcome {
+              font-size: 24px;
+              color: #333;
+              font-weight: bold;
+              text-align:center;
+          }
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  #view {
+              position: absolute; /* Set the position to absolute */
+              top: 50%; /* Position 20 pixels from the top */
+              left:50px; /* Position 20 pixels from the left */
+              font-size: 20px;
+              color: #3366cc;
+              font-weight: bold;
+              cursor: pointer;
+          }
+  
+          /* Styles for the SEARCH RECOMMENDED JOB paragraph */
+          #search {
+              position: absolute; /* Set the position to absolute */
+              bottom: 280px; /* Position 20 pixels from the bottom */
+              right: 650px; /* Position 20 pixels from the right */
+              font-size: 18px;
+              color: #3366cc;
+              font-weight: bold;
+              cursor: pointer;
+          }
+          .hand-icon::after {
+              content: "\261B"; /* Unicode character for hand icon */
+              font-size: 24px;
+              color: #3366cc; /* Adjust color as needed */
+              margin-right: 5px; /* Add some space between icon and text */
+          }
+  .dropdown-content a:hover {
+    background-color: #111;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  .dropdown:hover .dropbtn {
+    background-color: #111;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  
+  /* .container {
+    padding: 16px;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+  } */
+  
+  .card1,
+  .card2,
+  .card3 {
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    width: 15vw;
+    border-radius: 30px;
+    
+  }
+  
+  .card1 {
+    background-image: url('profile.jpg');
+    background-size:cover;
+    background-position:center;
+    height: 30vh;
+    
+    
+    
+  }
+  
+  .card2 {
+    background-image: url('recommend.jpg');
+    background-size:cover;  
+    height: 30vh;
+  }
+  .card3{
+    background-image: url('recommend.jpg');
+    background-size:cover; 
+    height: 30vh;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  @media screen and (min-width: 600px) {
+    .container {
+      flex-direction: row;
+    }
+  
+   
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 9999;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+  }
+  
+  .jobpost {
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  form {
+    padding: 10px;
+    margin: 0;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"] {
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+    
+  
+  }
+  .close-btn{
+    background-color: #007bff;
+    height: 40px;
+    width:70px;
+    border-radius: 7px;
+    color: white;
+  }
+  .Actions {
+    display: none;
+    position: fixed;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 9999;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+  }
+  
+  .jobactions {
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          z-index: 1000;
+          max-width: 40%; /* Adjust the max-width as needed */
+          overflow: auto; /* Enable scrolling if content exceeds the popup height */
+          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      }
+  
+      /* Styles for the overlay */
+      .overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 999;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+      }
+  
+      /* Styles for the close button */
+      .popup button {
+          background-color: #333;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: background-color 0.3s ease-in-out;
+      }
+  
+      .popup button:hover {
+          background-color: #555;
+      }
+  
+      /* Styles for the link inside the popup */
+      .popup a {
+          color: #007bff;
+          text-decoration: none;
+          transition: color 0.3s ease-in-out;
+      }
+  
+      .popup a:hover {
+          color: #0056b3;
+          text-decoration: underline;
+      }
+  
+      /* Styles for showing the popup */
+      .popup.active {
+          display: block;
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+      }
+  
+      .overlay.active {
+          display: block;
+          opacity: 1;
+      }
+      .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+       }
+    
+       .subdiv{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-evenly;
+       }
+       #post{
+        color: #007bff;
+       }
+       #action{
+        color: #007bff;
+        
+       }
+       #jobs{
+        color: #007bff;
+       }
+       .hand-icon {
+        cursor:pointer;
+        font-size: 24px;
+        
+    }

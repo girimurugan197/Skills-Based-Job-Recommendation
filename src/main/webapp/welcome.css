@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('jobs.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
+h3 {
+    font-size: 40px;
+    color:black;
+}
+
+.intro {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    height: 70vh;
+    gap:30px; 
+    
+}
+
+.recruiter,
+.applicant {
+    background-color:black;
+    color:white;
+    display: block; 
+    width: 200px; 
+    height: 60px; 
+    margin-bottom: 20px; 
+    font-size: 20px; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.recruiter:hover,
+.applicant:hover {
+    background-color: #e0e0e0;
+}

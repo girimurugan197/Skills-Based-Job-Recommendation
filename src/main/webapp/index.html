@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="welcome.css">
+    <title>Welcome Page</title>
+   
+</head>
+<body>
+    <h3>WELCOME!</h3>
+    <div class="intro">
+        <p>It's a platform for connecting the young technical minds with the recruiters who are actively looking for the best minds.</p>    
+    </div>
+    <div class="button-container">
+        <button class="recruiter" name="Recruiter" onclick="loadrecruiter()">Recruiter</button>
+        <button class="applicant" name="Applicant" onclick="loadapplicant()">Applicant</button>
+    </div>
+    <script>
+        function loadrecruiter(){
+            window.location.href='indexrecruiter.jsp';
+
+        }
+        function loadapplicant(){
+            window.location.href='index.jsp';
+        }
+
+    </script>
+</body>
+</html>
